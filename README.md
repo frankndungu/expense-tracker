@@ -16,14 +16,12 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Options API
 
-```sh
-npm run dev
+- Added data to the component array and looped over it using the v-for directive
+- ':class' and ':key' directives have been used as well to output the data
 ```
+<li v-for="transaction in transactions" :key="transcation.id" :class="transaction.amount < 0 : 'minus' : 'plus'"> 
+</li>
 
-### Compile and Minify for Production
-
-```sh
-npm run build
 ```
